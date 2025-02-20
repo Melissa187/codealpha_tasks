@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Flashcard Quiz App</h1>
+
+    <h2>Add a Flashcard</h2>
+    <form action="/add" method="post">
+        <input type="text" name="question" placeholder="Enter question" required>
+        <input type="text" name="answer" placeholder="Enter answer" required>
+        <button type="submit">Add Flashcard</button>
+    </form>
+
+    <h2>Flashcards</h2>
+    <ul>
+        {% for card in flashcards %}
+            <li><strong>Q:</strong> {{ card.question }} | <strong>A:</strong> {{ card.answer }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Take a Quiz</h2>
+    <form action="/quiz">
+        <button type="submit">Start Quiz</button>
+    </form>
+
+    {% if current_question %}
+    <h3>Question: {{ current_question.question }}</h3>
+    <form action="/check_answer" method="post">
+        <input type="text" name="user_answer" placeholder="Your Answer" required>
+        <button type="submit">Submit Answer</button>
+    </form>
+    {% endif %}
+
+    {% if result %}
+    <h3>{{ result }}</h3>
+    {% endif %}
+
+    {% if score.correct or score.wrong %}
+    <h2>Quiz Score</h2>
+    <p>✅ Correct: {{ score.correct }} | ❌ Wrong: {{ score.wrong }}</p>
+    {% endif %}
+
+    {% if not current_question and result == "🎉 Quiz Completed!" %}
+    <h2>{{ result }}</h2>
+    {% endif %}
+</body>
+</html>
