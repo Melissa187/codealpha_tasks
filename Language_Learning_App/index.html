@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards & Forum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Upload a Lesson</h2>
+    <input type="file">
+
+    <h2>Add a Flashcard</h2>
+    <input type="text" id="flashcardTerm" placeholder="Term">
+    <input type="text" id="flashcardDefinition" placeholder="Definition">
+    <button id="addFlashcardButton">Add Flashcard</button>
+
+    <h2>Flashcards</h2>
+    <div id="flashcardContainer"></div> <!-- Flashcards will appear here -->
+
+    <h2>Forum Section</h2>
+    <input type="text" id="forumInput" placeholder="Write a message">
+    <button id="postButton">Post</button>
+
+    <div id="forumPosts"></div> <!-- Forum messages will appear here -->
+
+    <script src="scripts.js"></script>
+</body>
+</html>

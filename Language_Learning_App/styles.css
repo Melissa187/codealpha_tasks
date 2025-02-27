@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Headings */
+h2 {
+    color: #333;
+}
+
+/* File Upload Section */
+input[type="file"] {
+    margin: 10px 0;
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Flashcard Container */
+#flashcardContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Flashcard Design */
+.flashcard {
+    background-color: #f8d7da;  /* Light red/pink background */
+    border: 2px solid #721c24;  /* Dark red border */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Forum Section */
+#forumInput {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#postButton {
+    padding: 8px 15px;
+}
+
+/* Forum Posts */
+#forumPosts {
+    margin-top: 15px;
+}
+
+#forumPosts p {
+    background-color: #d4edda;  /* Light green background */
+    border: 2px solid #155724;  /* Dark green border */
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
